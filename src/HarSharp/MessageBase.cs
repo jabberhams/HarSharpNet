@@ -27,12 +27,12 @@ namespace HarSharp
         /// <summary>
         /// Gets the list of cookie objects.
         /// </summary>
-        public IList<Cookie> Cookies { get; private set; }
+        public IList<Cookie> Cookies { get; set; }
 
         /// <summary>
         /// Gets the list of header objects.
         /// </summary>
-        public IList<Header> Headers { get; private set; }
+        public IList<Header> Headers { get; set; }
 
         /// <summary>
         /// Gets or sets the total number of bytes from the start of the HTTP request message until (and including) the double CRLF before the body.
