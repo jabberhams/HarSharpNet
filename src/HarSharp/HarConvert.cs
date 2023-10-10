@@ -36,7 +36,12 @@ namespace HarSharp
         /// <returns>The HAR entity.</returns>
         public static Har DeserializeFromFile(string fileName)
         {
-            return Deserialize(File.ReadAllText(fileName));
+            using var stream = File.OpenRead(fileName);
+            var result = JsonSerializer.Deserialize<Har>(stream);
+
+            TransformPartialRedirectUrlToFull(result);
+
+            return result;
         }
 
         /// <summary>
