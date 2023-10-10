@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace HarSharp
 {
@@ -22,7 +22,7 @@ namespace HarSharp
                 throw new ArgumentNullException(nameof(harJson));
             }
 
-            var result = JsonConvert.DeserializeObject<Har>(harJson);
+            var result = JsonSerializer.Deserialize<Har>(harJson);
 
             TransformPartialRedirectUrlToFull(result);
 
