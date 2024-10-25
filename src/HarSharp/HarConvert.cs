@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace HarSharp
 {
@@ -10,6 +10,12 @@ namespace HarSharp
     /// </summary>
     public static class HarConvert
     {
+        private static readonly JsonSerializerOptions _options = new()
+        {
+            PropertyNameCaseInsensitive = true,
+            DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+        };
+
         /// <summary>
         /// Deserialize HAR content to a HAR entity.
         /// </summary>
@@ -22,7 +28,7 @@ namespace HarSharp
                 throw new ArgumentNullException(nameof(harJson));
             }
 
-            var result = JsonConvert.DeserializeObject<Har>(harJson);
+            var result = JsonSerializer.Deserialize<Har>(harJson, _options);
 
             TransformPartialRedirectUrlToFull(result);
 
@@ -36,7 +42,12 @@ namespace HarSharp
         /// <returns>The HAR entity.</returns>
         public static Har DeserializeFromFile(string fileName)
         {
-            return Deserialize(File.ReadAllText(fileName));
+            using var stream = File.OpenRead(fileName);
+            var result = JsonSerializer.Deserialize<Har>(stream, _options);
+
+            TransformPartialRedirectUrlToFull(result);
+
+            return result;
         }
 
         /// <summary>

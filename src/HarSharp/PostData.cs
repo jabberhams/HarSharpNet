@@ -31,7 +31,7 @@ namespace HarSharp
         /// <summary>
         /// Gets the list of posted parameters (in case of URL encoded parameters).
         /// </summary>
-        public IList<PostDataParameter> Params { get; private set; }
+        public IList<PostDataParameter> Params { get; set; }
 
         /// <summary>
         /// Gets or sets the plain text posted data.

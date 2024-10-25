@@ -37,7 +37,7 @@ namespace HarSharp
         /// <summary>
         /// Gets the list of query parameter objects.
         /// </summary>
-        public IList<QueryStringParameter> QueryString { get; private set; }
+        public IList<QueryStringParameter> QueryString { get; set; }
 
         /// <summary>
         /// Gets or sets the posted data info.

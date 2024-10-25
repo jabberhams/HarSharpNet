@@ -1,13 +1,13 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{70A15BB4-14C0-449C-B0A7-B06506F2ED43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarSharp", "HarSharp\HarSharp.csproj", "{22FBDC05-C3A1-44E1-867E-737E59A3F4E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HarSharp", "HarSharp\HarSharp.csproj", "{22FBDC05-C3A1-44E1-867E-737E59A3F4E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarSharp.UnitTests", "HarSharp.UnitTests\HarSharp.UnitTests.csproj", "{41BAC9B8-18EC-4781-AF33-4D0B820DF9B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HarSharp.UnitTests", "HarSharp.UnitTests\HarSharp.UnitTests.csproj", "{41BAC9B8-18EC-4781-AF33-4D0B820DF9B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

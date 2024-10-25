@@ -42,12 +42,12 @@ namespace HarSharp
         /// <summary>
         /// Gets the pages.
         /// </summary>
-        public IList<Page> Pages { get; private set; }
+        public IList<Page> Pages { get; set; }
 
         /// <summary>
         /// Gets the entries.
         /// </summary>
-        public IList<Entry> Entries { get; private set; }
+        public IList<Entry> Entries { get; set; }
         #endregion
     }
 }
