@@ -1,6 +1,6 @@
-#addin nuget:?package=Cake.Sonar&version=1.1.33
-#tool nuget:?package=MSBuild.SonarQube.Runner.Tool&version=4.8.0
-#addin nuget:?package=Cake.Git&version=4.0.0
+#tool nuget:?package=MSBuild.SonarQube.Runner.Tool
+#addin nuget:?package=Cake.Sonar
+#addin nuget:?package=Cake.Git
 
 var target = Argument("target", "Default");
 var solutionDir = "src";
